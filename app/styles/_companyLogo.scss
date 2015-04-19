@@ -1,0 +1,47 @@
+$logoSize:  20px; // cube length
+.logo{
+  perspective: 600px;
+}
+.cube {
+  width: $logoSize;
+  height: $logoSize;
+  position: relative;
+  transform-style: preserve-3d; transform:rotateX(45deg)rotateZ(-45deg);
+  animation:logoRotation 8s infinite linear alternate;
+}
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: red;
+  opacity: 0.8;
+}
+.cube-face-front {
+  background: yellow;
+  transform: translate3d(0, 0, $logoSize/2);
+}
+.cube-face-back {
+  background: orange;
+  transform: rotateY(180deg) translate3d(0, 0, $logoSize/2);
+}
+.cube-face-left {
+  background: green;
+  transform: rotateY(-90deg) translate3d(0, 0, $logoSize/2);
+}
+.cube-face-right {
+  background: magenta;
+  transform: rotateY(90deg) translate3d(0, 0, $logoSize/2);
+}
+.cube-face-top {
+  background: blue;
+  transform: rotateX(90deg) translate3d(0, 0, $logoSize/2);
+}
+.cube-face-bottom {
+  background: red;
+  transform: rotateX(-90deg) translate3d(0, 0, $logoSize/2);
+}
+
+@keyframes logoRotation{
+  0%  {transform:rotateX(45deg) rotateZ(-45deg)};
+  100%{transform:rotateX(405deg) rotateZ(315deg)};
+}
