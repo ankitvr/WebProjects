@@ -1,0 +1,41 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+$iconRadius:20px;
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+.social-icons>a{
+  display: inline-block;
+  position: relative;
+  color: #bdbdbd;
+  width: $iconRadius;
+  height: $iconRadius;
+  text-align: center;
+  font-size: $iconRadius/34 em;
+  line-height: $iconRadius*0.04 em;
+  background-color: #fff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0px ($iconRadius*0.06) 0px #bdbdbd, 0px ($iconRadius*0.06) ($iconRadius*0.2) #bababa;
+  -webkit-transition:background-color 250ms ease 0s;
+  transition:background-color 250ms ease 0s;
+  &.facebook:hover{background-color: #4986c7;}
+  &.twitter:hover{background-color: #4cb6e8;}
+  &.linkedin:hover{background-color: #29a0cc;}
+  &.youtube:hover{background-color: #a32929;}
+  &.flickr:hover{background-color: #c257ad;}
+  &.email:hover{background-color: #d5b120;}
+  &.facebook .zocial-facebook{margin-left: ($iconRadius*-0.16)}
+  &:hover{
+    color: #fff;
+    box-shadow: 0px ($iconRadius*0.06) 0px #686868, 0px ($iconRadius*0.06) ($iconRadius*0.2) #7e7e7e;
+  }
+
+  &:active{
+    box-shadow: inset 0px ($iconRadius*0.02) ($iconRadius*0.08) #3d3d3d, 0px 0px 0px #bdbdbd;
+    top: 3px;
+  }
+}
